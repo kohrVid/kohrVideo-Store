@@ -16,18 +16,13 @@
 	  <%= render "layouts/header"%>
 
 	  <%= render "layouts/alerts" %>
+	  <br />
 
 	  <div id = "main-content" class = "row full-min-height">
 		  <%= yield %>
 	  </div>
 
-	  <footer class = "row">
-		  <div class = "large-12 columns">
-			  <hr>
-			  <p>©2015 kohrVideo Store</p>
-		  </div>
-	  </footer>
-
+	  <%= render "layouts/footer"%>
 	  <%= javascript_include_tag "application"%>
 
   </body>

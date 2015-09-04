@@ -1,4 +1,4 @@
-<div class = "row">
+<div class = "row navbar">
 	<ul class = "title-area">
 		<li class = "name">
 			<h1>
@@ -10,16 +10,22 @@
 		<li class = "toggle-topbar"><a href = "#"><span>Menu</span></a></li>
 	</ul>
 
-	<section class = "top-bar-section">
+	<div class = "top-bar-section">
 		<ul class = "right">
 			<%if signed_in?%>
-				<li><%link_to current_user.email, edit_user_registration_path %></li>
-				<li><%link_to "Logout", destroy_user_session_path, method: :delete %></li>
+				<li><%=link_to current_user.email, edit_user_registration_path %></li>
+				<li><%=link_to "Logout", destroy_user_session_path, method: :delete %></li>
+			<li><%= link_to cart_path do%>
+				<i class = "fi-shopping-cart"></i>My Cart
+				(<span class = "cart-count"><%=current_user.cart_count%></span>)
+			<%end%>
+			</li>
 			<%else%>
-				<li><%link_to "Register", new_user_registration_path %></li>
-				<li><%link_to "Login", new_user_session_path %></li>
+				<li><%=link_to "Register", new_user_registration_path %></li>
+				<li><%=link_to "Login", new_user_session_path %></li>
 			<%end%>
 		</ul>
-	</section>
+
+	</div>
 
 </div>

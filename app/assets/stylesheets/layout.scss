@@ -9,9 +9,20 @@
 body{
 	background-image: url(body_bg.png);background-position: top;
 	background-position: -60% 15%;
+	color: #fff;
 }
 
 //Logo
+.navbar{ 
+	background-color: rgba(0, 0, 0, 0.8);
+	ul{
+		li {
+		list-style-type: none;
+		}
+	}
+
+}
+
 .title-area{
 	a { padding: 0 !important }
 	i {
@@ -23,7 +34,7 @@ body{
 
 //Topbar items
 top-bar-section ul li {
-	background: transparent;
+	//background: transparent;
 }
 //Forms
 .font-container{
