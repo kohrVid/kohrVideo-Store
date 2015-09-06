@@ -1,28 +1,26 @@
-
 <h4>Featured Movies</h4>
 
-<div class = "column">
-	<ul class = "movies-grid no-bullet">
-		<% @movies.each do |movie| %>
-			<li class = "large-3 medium-4 small-12 column" >
-				<div class = "movie-card padly">
-					<%= link_to movie, class: "poster" do %>
-					<%= image_tag movie.poster%>
-					<%end%>
-					<div class "movie-info ell glass-bg padmy padlx">
-						<div class = "title">
-							<h6><%= movie.title %><span>(<%= movie.release_year%>)</span></h6>
-						</div>
-						<p class = "left price label movie-label radius">£<%= sprintf("%.2f", movie.price)%></p>
-						<%= link_to movie.imdb, class: "right" do %>
-							<%= image_tag "imdb_logo.png"%>
+	<div class = "column">
+		<ul class = "movies-grid no-bullet small-block-grid-1 medium-block-grid-3 large-block-grid-4">
+			<% @movies.each do |movie| %>
+				<li>
+					<div class = "movie-card padly">
+						<%= link_to movie, class: "poster" do %>
+						<%= image_tag movie.poster%>
 						<%end%>
+						<div class "movie-info ell glassy-bg padmy padlx">
+							<div class = "title">
+								<h6><%= movie.title %> <span>(<%= movie.release_year%>)</span></h6>
+							</div>
+							<p class = "left price label movie-label radius">£<%= sprintf("%.2f", movie.price)%></p>
+							<%= link_to movie.imdb, class: "right" do %>
+								<%= image_tag "imdb_logo.png"%>
+							<%end%>
+						</div>
 					</div>
-				</div>
-			</li>
-		<%end%>
-	</ul>
-</div>
-
-<br>
+				</li>
+			<%end%>
+				
+		</ul>
+	</div>
 

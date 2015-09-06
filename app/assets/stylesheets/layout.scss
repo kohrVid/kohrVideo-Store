@@ -1,4 +1,4 @@
-//Custome layout styles
+//Custom layout styles
 //Default font family
 @font-face {
 	font-family: 'gotham-rounded';
@@ -8,7 +8,9 @@
 //Body background
 body{
 	background-image: url(body_bg.png);background-position: top;
-	background-position: -60% 15%;
+	background-position: 60% 15%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 	color: #fff;
 }
 
@@ -53,7 +55,16 @@ top-bar-section ul li {
 			height: 325px;
 			width: 100%;
 		}
-		.movie-info {.title {height: 4em;}}
+		.movie-info {.title {height: 15em;}}
 	}
 }
 
+//Description in the movies#show page
+.movie-description {
+	padding-right: 100px;
+	padding-top: 15px;
+}
+.row {
+	margin-bottom: 25px !important;
+
+}
