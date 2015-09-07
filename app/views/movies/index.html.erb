@@ -6,16 +6,17 @@
 				<li>
 					<div class = "movie-card padly">
 						<%= link_to movie, class: "poster" do %>
-						<%= image_tag movie.poster%>
+							<%= image_tag movie.poster%>
+							<div class "movie-info ell glassy-bg padmy padlx">
+								<div class = "title">
+									<h6><%= movie.title %> <span>(<%= movie.release_year%>)</span></h6>
+								</div>
+								<p class = "left price label movie-label radius">£<%= sprintf("%.2f", movie.price)%></p>
 						<%end%>
-						<div class "movie-info ell glassy-bg padmy padlx">
-							<div class = "title">
-								<h6><%= movie.title %> <span>(<%= movie.release_year%>)</span></h6>
-							</div>
-							<p class = "left price label movie-label radius">£<%= sprintf("%.2f", movie.price)%></p>
-							<%= link_to movie.imdb, class: "right" do %>
-								<%= image_tag "imdb_logo.png"%>
-							<%end%>
+						
+						<%= link_to movie.imdb, class: "right" do %>
+							<%= image_tag "imdb_logo.png"%>
+						<%end%>
 						</div>
 					</div>
 				</li>

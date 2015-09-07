@@ -37,6 +37,9 @@ gem 'devise'
 gem 'redis' #, '~> 3.0.1'
 gem 'hiredis' #, '~> 0.4.5'
 gem 'protected_attributes'
+gem 'braintree', '~> 2.33.1'
+gem 'figaro', '~> 0.7.0'
+gem 'gon', '~> 5.1.2'
 
 group :development, :test do
 
