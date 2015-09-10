@@ -10,3 +10,4 @@ $(window).load ->
     $.ajax url: ul, type: 'put', success: (data) ->
       $('.cart-count').html(data)
       $this.closest('.cart-movie').slideUp()
+   

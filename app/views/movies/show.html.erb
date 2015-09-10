@@ -1,4 +1,3 @@
-
 <div class = "large-9 small-12 column">
 	<h3>
 		<%= @movie.title %>
@@ -28,7 +27,7 @@
 				<iframe width ="100%" height="" src="<%= @movie.video_url%>" frameborder="0" allowfullscreen></iframe>
 			</div>
 		<%else%>
-			<%= link_to cart_path, class: "button", data: {target: @cart_action, addUrl: add_to_cart_path(@movie), removeUrl: remove_from_cart_path(@movie)} do%>
+			<%= link_to "", class: "button", data: {target: @cart_action, addUrl: add_to_cart_path(@movie), removeUrl: remove_from_cart_path(@movie)} do%>
 			<i class = "fi-shopping-cart"></i>
 			<span><%=@cart_action%></span> Cart
 			<%end%>
