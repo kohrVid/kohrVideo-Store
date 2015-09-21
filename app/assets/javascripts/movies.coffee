@@ -11,9 +11,11 @@ $(window).load ->
     if $this.data('target') == 'Add to'
       url = $this.data('addurl')
       new_target = "Remove from"
+      (window).location.reload(true)
      else
        url = $this.data('removeurl')
        new_target = "Add to"
+       (window).location.reload(true)
      $.ajax url: url, type: 'put', success: (data) ->
      $('.cart-count').html(data)
      $this.find('span').html(new_target)

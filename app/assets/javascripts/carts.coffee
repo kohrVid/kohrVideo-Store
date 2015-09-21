@@ -7,7 +7,8 @@ $(window).load ->
     e.preventDefault()
     $this = $(this).closest('a')
     url = $this.data('targeturl')
-    $.ajax url: ul, type: 'put', success: (data) ->
+    (window).location.reload(true)
+    $.ajax url: url, type: 'put', success: (data) ->
       $('.cart-count').html(data)
       $this.closest('.cart-movie').slideUp()
    
