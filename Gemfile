@@ -34,8 +34,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'foundation-rails'
 gem 'devise'
-gem 'redis' #, '~> 3.0.1'
-gem 'hiredis' #, '~> 0.4.5'
+gem 'redis', '~> 3.0.1'
+gem 'hiredis'#, '~> 0.4.5'
 #gem 'protected_attributes'
 gem 'braintree', '~> 2.33.1'
 gem 'figaro', '~> 0.7.0'
@@ -44,10 +44,10 @@ gem 'gon', '~> 5.1.2'
 group :development, :test do
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
+ # gem 'byebug'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
+#  gem 'web-console', '~> 2.0'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'

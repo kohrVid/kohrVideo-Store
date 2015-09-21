@@ -34,7 +34,7 @@ body{
 }
 
 .title-area{
-	a { padding: 0 !important }
+	a { padding: 0 !important; }
 	i {
 		font-size: 30px;
 		position: relative;
@@ -54,6 +54,24 @@ top-bar-section ul li {
 		top: -5px;
 	}
 }
+
+	//placeholder 
+	$phc: #333;
+	::-webkit-input-placeholder {
+		   color: $phc;
+	   }
+	   
+	   :-moz-placeholder { /* Firefox 18- */
+		      color: $phc;  
+	      }
+	      
+	      ::-moz-placeholder {  /* Firefox 19+ */
+		         color: $phc;  
+		 }
+		 
+		 :-ms-input-placeholder {  
+			    color: $phc;  
+		    }
 
 .movies-grid{
 	.movie-card{
@@ -77,8 +95,8 @@ top-bar-section ul li {
 
 }
 
-.fi-x{
-	color: #7F8EBC !important;
+iframe {
+	margin-top: 20px;
 }
 
 .break{

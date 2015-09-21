@@ -34,4 +34,8 @@ class User < ActiveRecord::Base
   def purchase?(movie)
 	  movies.include?(movie)
   end
+
+  def has_payment_info?
+	  braintree_customer_id
+  end
 end
