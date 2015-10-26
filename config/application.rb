@@ -23,8 +23,7 @@ module Moviestore
     # Do not swallow errors in after_commit/after_rollback callbacks.
     
     Rails.application.config.action_controller.include_all_helpers = true
-    config.force_ssl = true 
-
+    config.filter_parameters << :password 
 
   end
 end
