@@ -21,9 +21,11 @@ module Moviestore
     # config.i18n.default_locale = :de
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
-    
+
+
+=begin    
     Rails.application.config.action_controller.include_all_helpers = true
     config.filter_parameters << :password 
-
+=end
   end
 end

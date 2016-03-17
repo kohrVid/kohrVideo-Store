@@ -8,5 +8,10 @@
 
 require 'csv'
 CSV.foreach(Rails.root.join("db/seeds_data/movies.csv"), headers: true) do |row|
-	Movie.find_or_create_by(title: row[0], release_year: row[1], price: row[2], description: row[3], imdb_id: row[4], poster_url: row[5], video_url: row[6])
+	if ENV["deseed"]
+		Movie.where(title: row[0], release_year: row[1], price: row[2], description: row[3], imdb_id: row[4], poster_url: row[5], video_url: row[6]).destroy_all
+#		Movie.where(imdb_id: row[4]).destroy_all
+	else
+		Movie.find_or_create_by(title: row[0], release_year: row[1], price: BigDecimal.new(row[2].to_s), description: row[3], imdb_id: row[4], poster_url: row[5], video_url: row[6])
+	end
 end

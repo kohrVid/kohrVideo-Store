@@ -13,41 +13,41 @@
 
 ActiveRecord::Schema.define(version: 20150921134334) do
 
-  create_table "movies", force: :cascade do |t|
-    t.string   "title",        limit: 255
-    t.integer  "release_year", limit: 4
-    t.float    "price",        limit: 24
-    t.text     "description",  limit: 65535
-    t.string   "imdb_id",      limit: 255
-    t.string   "poster_url",   limit: 255
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
-    t.string   "video_url",    limit: 255
+  create_table "movies", force: true do |t|
+    t.string   "title"
+    t.integer  "release_year"
+    t.decimal  "price",        precision: 10, scale: 2
+    t.text     "description"
+    t.string   "imdb_id"
+    t.string   "poster_url"
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
+    t.string   "video_url"
   end
 
-  create_table "purchases", force: :cascade do |t|
-    t.integer  "movie_id",   limit: 4
-    t.integer  "buyer_id",   limit: 4
+  create_table "purchases", force: true do |t|
+    t.integer  "movie_id"
+    t.integer  "buyer_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   add_index "purchases", ["movie_id", "buyer_id"], name: "index_purchases_on_movie_id_and_buyer_id", unique: true, using: :btree
 
-  create_table "users", force: :cascade do |t|
-    t.string   "email",                  limit: 255, default: "", null: false
-    t.string   "encrypted_password",     limit: 255, default: "", null: false
-    t.string   "reset_password_token",   limit: 255
+  create_table "users", force: true do |t|
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          limit: 4,   default: 0,  null: false
+    t.integer  "sign_in_count",          default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip",     limit: 255
-    t.string   "last_sign_in_ip",        limit: 255
-    t.datetime "created_at",                                      null: false
-    t.datetime "updated_at",                                      null: false
-    t.string   "braintree_customer_id",  limit: 255
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.string   "braintree_customer_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
